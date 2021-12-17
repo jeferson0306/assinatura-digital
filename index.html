@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Teste</title>
+</head>
+
+<body>
+
+    <div class="modal-header primary">
+        <h5 class="modal-title">Assinatura Digital</h5>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <canvas #canvas id="quadro"></canvas>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-danger" (click)="clear()">Limpar</button>
+        <button class="btn btn-success" (click)="save()">Salvar</button>
+    </div>
+
+    <script>
+        var c = document.getElementById("quadro");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#FCC000";
+        ctx.fillRect(0, 0, 300, 150);
+
+        //const quadro = document.querySelector('#quadro');
+        //const contexto = quadro.getConext('2d');
+        //contexto.fillStyle = '#fbf8f8'
+        //contexto.fillRect(0, 0, 100, 100);
+    </script>
+
+</body>
+
+</html>
